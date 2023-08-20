@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Discount Application</title>
+</head>
+<body>
+
+<label for="couponCode">Enter Coupon Code:</label>
+<input type="text" id="couponCode">
+<button onclick="applyDiscount()">Apply Discount</button>
+
+<p>Total Amount: $<span id="totalAmount">0</span></p>
+<p>Discounted Amount: $<span id="discountedAmount">0</span></p>
+<p>After Discount: $<span id="afterDiscountAmount">0</span></p>
+
+<script>
+var total = 0; // Initial total amount
+
+function applyDiscount() {
+  var couponCode = document.getElementById("couponCode").value;
+  var totalAmountElement = document.getElementById("totalAmount");
+  var discountedAmountElement = document.getElementById("discountedAmount");
+  var afterDiscountAmountElement = document.getElementById("afterDiscountAmount");
+
+  // Assuming you have a way to set the total amount (e.g., user input)
+  total = 230; // Example total amount
+
+  totalAmountElement.textContent = total.toFixed(2);
+
+  if (couponCode === "SELL200" && total > 200) {
+    // Apply a 20% discount if the coupon code is correct and total is greater than 200
+    var discountedAmount = total * 0.2; // 20% discount
+    var finalTotal = total - discountedAmount;
+    discountedAmountElement.textContent = discountedAmount.toFixed(2);
+    afterDiscountAmountElement.textContent = finalTotal.toFixed(2);
+  } else {
+    var finalTotal = total; // No discount applied
+    discountedAmountElement.textContent = finalTotal.toFixed(2);
+    afterDiscountAmountElement.textContent = finalTotal.toFixed(2);
+  }
+}
+</script>
+
+</body>
+</html>
