@@ -29,16 +29,32 @@
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
   }
-@media only screen and (max-width: 600px) {
+
+  
+@media  (max-width: 414px) {
     .card-section{
         display: block;
+        
     }
-    *{
+    .rimg{
+        justify-content: space-around;
+        width: 300px;
+        margin-left: -50px;
         margin-top: 5px;
     }
 
 }
+@media (min-width: 414px) and (max-width: 1280px)  {
 
+    .card-section{
+        display: block;
+    }
+    .rimg{
+        margin-left: 25%;
+    }
+
+    }
+  }
 
 
 

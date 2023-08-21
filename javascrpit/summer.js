@@ -61,7 +61,7 @@ const amount = 0; // Replace this with your actual amount value
 
 //  click event listener to the button
 refreshButton.addEventListener("click", function() {
-    if (amount !== 0) {
+  
         location.reload();
-    }
+  
 });
